@@ -28,7 +28,7 @@ public:
 		unsigned long newmillis=millis();  // temp vars so easier comparison
 		if ((newmillis-counter)>=interval)
 			{
-			if (catchup) counter=millis(); else counter+=interval;
+			if (catchup) counter=newmillis; else counter+=interval;
 			return true;
 			}
 		return false;
