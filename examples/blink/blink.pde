@@ -14,7 +14,7 @@ void setup(void)
 
 void loop(void)
 	{
-	if (mytimer.isOver(1000)) // 1000 ms intervals
+	if (mytimer.onTimeout(1000)) // 1000 ms intervals
 		{
 		toggle=~toggle; 
 		if (toggle) digitalWrite(BLINKER,HIGH); else digitalWrite(BLINKER,LOW);		

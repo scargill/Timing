@@ -12,8 +12,8 @@ Timing	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin	KEYWORD2
-isOver	KEYWORD2
+begin	    KEYWORD2
+onTimeout	KEYWORD2
 
 
 ######################################

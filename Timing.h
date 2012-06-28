@@ -23,7 +23,7 @@ public:
 		catchup=cat;
 	}
 		
-	boolean isOver(unsigned long interval)
+	boolean onTimeout(unsigned long interval)
 	{
 		unsigned long newmillis=millis();  // temp vars so easier comparison
 		if ((newmillis-counter)>=interval)
@@ -33,6 +33,19 @@ public:
 			}
 		return false;
 	}
+	
+	
+	void onTimeout(unsigned long interval, void (*g)()) // this version pass function as parameter
+	{
+		unsigned long newmillis=millis();  // temp vars so easier comparison
+		if ((newmillis-counter)>=interval)
+			{
+			if (catchup) counter=newmillis; else counter+=interval;
+			g();
+			}
+	}
+	
+	
 
 };
 #endif
