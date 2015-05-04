@@ -6,7 +6,7 @@
 // in loop():       if (mytimer.isOver(1000) {
 //                                           do something every 1000ms
 //                                           }
-// Copyright (c) 2015 Peter Scargill
+// This is Copyright (c) 2015 Peter Scargill
 //
 #ifndef Timing_h
 #define Timing_h
