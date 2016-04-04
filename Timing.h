@@ -7,7 +7,6 @@
 //                                           do something every 1000ms
 //                                           }
 // This file Copyright (c) 2015 Peter Scargill
-=======
 //
 #ifndef Timing_h
 #define Timing_h
@@ -37,7 +36,6 @@ public:
         return false;
     }
 
-
     void onTimeout(unsigned long interval, void (*g)()) // this version pass function as parameter
     {
         unsigned long newmillis=millis();  // temp vars so easier comparison
@@ -47,42 +45,5 @@ public:
             g();
             }
     }
-
-
-
-};
-#endif
-=======
-public:
-    void begin(boolean cat)
-    {
-        counter=millis();
-        catchup=cat;
-    }
-
-    boolean onTimeout(unsigned long interval)
-    {
-        unsigned long newmillis=millis();  // temp vars so easier comparison
-        if ((newmillis-counter)>=interval)
-            {
-            if (catchup) counter=newmillis; else counter+=interval;
-            return true;
-            }
-        return false;
-    }
-
-
-    void onTimeout(unsigned long interval, void (*g)()) // this version pass function as parameter
-    {
-        unsigned long newmillis=millis();  // temp vars so easier comparison
-        if ((newmillis-counter)>=interval)
-            {
-            if (catchup) counter=newmillis; else counter+=interval;
-            g();
-            }
-    }
-
-
-
 };
 #endif
